@@ -11,7 +11,11 @@
 <body>
     <div class="hero-header">
         <div class="wrapper">
-            <header>
+            </div>
+            <header> <button class="mode-toggle">
+                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
+            </button>
                 <div class="logo">
                     <i class="fa-solid fa-l"></i>
                     <div class="logo-text">Lucas Melgarejo</div>
@@ -24,14 +28,14 @@
                     </div>
                     <ul class="navlinks">
                         <li><a href="#Home">Home</a></li>
-                        <li><a href="#Proyectos">Proyectos</a></li>
                         <li><a href="#Habilidades">Habilidades</a></li>
+                        <li><a href="#Proyectos">Proyectos</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="container">
                 <div class="hero-pic">
-                    <img src="imagenes/" alt="perfil">
+                    <img src="https://i.postimg.cc/0N7bmNj2/Imagen-de-Whats-App-2025-03-09-a-las-19-48-30-d977e136.jpg" alt="perfil">
                 </div>
                 <div class="hero-text">
                     <h5>Hola, soy <span class="input"></span></h5>
@@ -45,39 +49,22 @@
                     <div class="social">
                         <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/lucasmelgarejo1"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" onclick="copiarEmail()"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
             <!-- Flecha de scroll -->
             <div class="scroll-down">
-                <a href="#Proyectos"><i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#Habilidades"><i class="fa-solid fa-chevron-down"></i></a>
             </div>
         </div>
     </div>
     
 
     <!-- Secciones  -->
-    <section id="Home" class="section"></section>
-    <section id="Proyectos" class="section">
-        <h2>Mis Proyectos</h2>
-  <div class="proyectos-container">
-    <div class="proyecto">
-      <h3>Landing Page</h3>
-      <p>Descripción breve del proyecto.</p>
-      <a href="https://landing-page-eta-lilac-15.vercel.app/" target="_blank">Ver Proyecto</a>
-    </div>
-    <div class="proyecto">
-      <h3>Proyecto 2: Nombre del Proyecto</h3>
-      <p>Descripción breve del proyecto.</p>
-      <a href="enlace-del-proyecto.html" target="_blank">Ver Proyecto</a>
-    </div>
-    <div class="proyecto">
-      <h3>Proyecto 3: Nombre del Proyecto</h3>
-      <p>Descripción breve del proyecto.</p>
-      <a href="enlace-del-proyecto.html" target="_blank">Ver Proyecto</a>
-    </div>
-    </section>
-    <section id="Habilidades" class="section">
+    <section id="Home" class="section">
+        
+    </section><section id="Habilidades" class="section">
         <h2>Habilidades</h2>
         <div class="skills-container">
             <!-- Tech Stack -->
@@ -110,10 +97,69 @@
             </div>
         </div>
     </section>
+    <section id="Proyectos" class="section">
+        <h2>Mis Proyectos</h2>
+        <div class="proyectos-container">
+            <div class="proyecto">
+                <h3>Landing Page</h3>
+                <p>Proyecto de landing page de apple</p>
+                <img src="imagenes/imagen1.jpg" alt="Imagen del Proyecto" class="proyecto-img">
+                <div class="tecnologias">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <a href="https://landingpageapple-six.vercel.app/" target="_blank">Ver Proyecto</a>
+            </div>
+            <div class="proyecto">
+                <h3>Calculadora</h3>
+                <p>Calculadora simple con python</p>
+                <img src="imagenes/imagen2.jpg" alt="Imagen del Proyecto" class="proyecto-img">
+                <div class="tecnologias">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <a href="https://calculadorapython.onrender.com" target="_blank">Ver Proyecto</a>
+            </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Todos los derechos reservados.</p>
+        <p>Lucas.melgarejo.dev@gmail.com</p>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/lucasmelgarejo1" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://wa.me/5493487691036" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        
+    </div>
+</footer>
+
     
-    
+<script>
+    function copiarEmail() {
+        const email = "lucas.melgarejo.dev@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Correo copiado al portapapeles: " + email);
+        }).catch(err => {
+            console.error("Error al copiar el correo: ", err);
+        });
+    }
+    </script>    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
     <script>
+
         /* boton show/hide navbar */
         var togglebtn = document.querySelector(".togglebtn");
         var nav = document.querySelector(".navlinks");
@@ -124,7 +170,7 @@
         });
 
         var typed = new Typed(".input", {
-            strings:["Frontend Developer", "Técnico en programación"],
+            strings:["Developer", "Técnico superior en programación"],
             typeSpeed:70,
             backSpeed:55,
             loop:true 
@@ -146,6 +192,13 @@
                 }
             });
         });
+
+        const modeToggle = document.querySelector('.mode-toggle');
+modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('day-mode');
+});
+
+
 
     </script>
 </body>

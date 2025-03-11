@@ -86,23 +86,29 @@ nav .navlinks li a{
     align-items: center;
     padding-top: 4rem;
 }
-.container .hero-pic{
-    width: 300px;
+.hero-pic {
+    width: 300px; /* Tamaño ajustado para que no se vea demasiado grande */
     height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 15px solid #444;
-    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
+    border-radius: 50%; /* Para que la imagen sea redonda */
+    overflow: hidden; /* Evita que la imagen sobresalga */
+    border: 5px solid #007ced; /* Borde azul para destacar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-}
-.hero-pic img{
-    height: 100%;
+.hero-pic img {
     width: 100%;
-    transition: 0.5s;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen se recorte sin deformarse */
+    transition: transform 0.3s ease-in-out;
 }
-.hero-pic img:hover{
-    transform: scale(1.2);
+
+.hero-pic img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
+
 .hero-text{
     max-width: 500px;
     display: flex;
@@ -129,19 +135,20 @@ nav .navlinks li a{
     margin:45px 0;
 }
 .btn-group .btn{
-    border-color: #d5d5d5;
+    border-color: #007ced;
     color: #fff;
     background-color: #333;
     padding: 12px 25px;
     margin: 5px 0;
     margin-right: 7px;
     border-radius: 30px;
-    border: 2px solid #e5e5e5;
+    border: 2px solid #007ced;
     box-shadow: 0 10px 10px -8px rgb(0, 0, 0 / 78%);
 }
-.btn.active{
-    border-color: #007ced;
+.btn-group .btn:hover{
+    background-color: #007ced;
 }
+
 .hero-text .social i {
     color:#e5e5e5;
     font-size: 18px;
@@ -339,38 +346,66 @@ body {
 
 
 /* *//* Sección de Proyectos */
+/* Sección de Proyectos *//* Estilos para la sección de proyectos */
+
+
+.day-mode .proyectos-container {
+    background-color: #F4F2EE;  /* Blanco crema */
+    color: black;
+}
+.day-mode .proyecto{
+    background-color: white;
+}
+.day-mode .proyecto h3, a {
+    color: black;
+}
+.day-mode .proyecto p {
+    color: black;
+}
+
+.day-mode .skills-container .skill-category {
+    background-color: white;
+}
+.day-mode .skills-container .skill-category h3 {
+    color: black;
+}
+.day-mode .skills-container .skill-category li {
+    color: black;
+}
+
 #Proyectos {
     padding: 40px 20px;
-    background-color: #222;
-    color: rgb(255, 255, 255);
-  }
+    background-color: #333;
+    color: var(--text-color);
+}
   
-  .proyectos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-  }
+.proyectos-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size); /* Espaciado uniforme */
+}
   
-  .proyecto {
-    background-color: #939393;
+.proyecto {
+    background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .proyecto h3 {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px;
+    margin: 15px 0; /* Asegurar separación */
+}
+
+.proyecto h3 {
     margin-top: 0;
     font-size: 1.4rem;
-    color: #333;
-  }
+    color: white;
+}
   
-  .proyecto p {
+.proyecto p {
     font-size: 1rem;
-    color: #555;
+    color: white;
     margin: 10px 0;
-  }
-  
-  .proyecto a {
+}
+
+.proyecto a {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
@@ -379,19 +414,273 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-  }
+}
   
-  .proyecto a:hover {
-    background-color: #0056b3;
-  }
-  
-  @media(max-width: 768px) {
-    #Proyectos {
-      padding: 20px 10px;
-    }
-  
-    .proyectos-container {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
+
+/* *//* Sección de footer */
+  .footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+    border-top: 0.1px solid #222;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #007ced;
+}
+
+/* night day mode
+
+//////////////
+
+*/
+/* Estilos generales */
+body {
+    background-color: #222;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Clase para el modo diurno */
+.day-mode {
+    background-color: #F4F2EE;  /* Blanco crema */
+    color: black;
+}
+
+/* Estilos para las secciones */
+section {
+    background-color: #222;
+    color: white;
+    padding: 50px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.day-mode .navlinks li a {
+    color: black;
+}
+.day-mode section {
+    background-color: #F4F2EE;  /* Blanco crema */
+    color: black;
+}
+
+/* Específicamente para la sección Proyectos */
+#Proyectos {
+    background-color: #222;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.day-mode #Proyectos {
+    background-color: #F4F2EE;  /* Blanco crema */
+    color: black;
+}
+
+/* Cambiar el color de texto en el hero-header */
+.hero-header {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.day-mode .hero-header {
+    background-color: #F4F2EE;  /* Blanco crema */
+    color: black;
+}
+
+.day-mode .hero-header .hero-text h5 {
+    color: black;
+    transition: color 0.3s;
+}
+.day-mode .hero-header .hero-text p {
+    color: black;
+    transition: color 0.3s;
+}
+
+
+
+
+
+
+
+
+/* Estilos del footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.day-mode footer {
+    background-color: white;  /**/
+    color: black;
+}
+
+/* Estilos de los enlaces */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+.day-mode .social a {
+    color: #007bff; /* Color de los iconos sociales en modo diurno */
+}
+
+/* Estilos para los botones */
+.btn {
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.day-mode .btn {
+    color: black;
+    background-color: white;  /* Blanco crema */
+    border: 2px solid #007ced;
+}
+.day-mode .btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.day-mode .scroll-down a {
+    color: #007ced;
+}
+
+.day-mode .footer-social i {
+    color: black;
+}
+.day-mode .footer-social:hover i {
+    color: #007ced;
+}
+
+.day-mode .logo-text {
+    color: black;
+}
+
+
+/*Estilos del header  */
+header {
+    margin-left: 14px;
+    position: relative;
+    padding: 10px 20px;  
+    text-align: center;
+} 
+    
+/* Estilo del logo */
+.logo-text {
+    color: white;
+    transition: color 0.3s;
+    display: inline-block;
+    margin-right: auto;  /* Alineamos el texto a la izquierda */
+    margin-left: auto;   /* Alineamos el texto a la derecha */
+}
+
+
+
+
+/* Estilos para el botón de cambio de modo */
+/* Estilos para el botón de cambio de modo */
+/* Estilos para el botón de cambio de modo */
+.mode-toggle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007ced;
+    border: none;
+    border-radius: 60%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Efecto de hover para el botón */
+.mode-toggle:hover {
+    
+    transform: translateX(-50%) scale(1.1);  /* Botón crece ligeramente */
+}
+
+/* Icono de sol visible en el modo diurno */
+.mode-toggle .fa-sun {
+    opacity: 0;
+}
+
+/* Icono de luna visible en el modo nocturno */
+.day-mode .mode-toggle .fa-sun {
+    opacity: 1;  /* Mostramos el icono de sol en modo diurno */
+}
+
+.mode-toggle .fa-moon {
+    opacity: 1;
+}
+
+.day-mode .mode-toggle .fa-moon {
+    opacity: 0;  /* Ocultamos el icono de luna en el modo diurno */
+}
+
+/* Estilo del botón en modo diurno */
+.day-mode .mode-toggle {
+    background-color: #007ced;  /* Fondo oscuro en modo diurno */
+}
+
+.day-mode .mode-toggle i {
+    color: white;  /* Iconos en blanco en el modo diurno */
+}
+
+/* Efectos de transición */
+.mode-toggle i {
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.day-mode .social i{
+    color: black;
+}
+
+.tecnologias {
+    display: flex;
+    gap: 10px; /* Espacio entre los íconos */
+    justify-content: center; /* Centrar los íconos */
+    margin-top: 10px;
+}
+
+.tecnologias i {
+    font-size: 2rem; /* Tamaño de los íconos */
+    color: #007ced; /* Color por defecto (puedes personalizarlo) */
+}
+
+.proyecto-img {
+    width: 100%; /* Ajustar al ancho del contenedor */
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    display: block;
+    margin: 10px auto; /* Centrar la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
