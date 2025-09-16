@@ -1,205 +1,377 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio profesional de Lucas Melgarejo, desarrollador web en formación y técnico superior en programación.">
+    <title>Lucas Melgarejo | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-1hcP5ZOFj2Hn3zA0QKIfQ9Vc3rroWAtxEvsC0ZFwEuk+qS0bkkCm1cW0XwuKADVY6jwxKF1u9IiMaivGi99ZHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="hero-header">
-        <div class="wrapper">
-            </div>
-            <header> <button class="mode-toggle">
-                <i class="fa-solid fa-sun"></i>
-                <i class="fa-solid fa-moon"></i>
+    <header class="site-header">
+        <div class="wrapper header-wrapper">
+            <a class="brand" href="#Home" aria-label="Ir al inicio">
+                <span class="brand-mark">L</span>
+                <span class="brand-name">Lucas Melgarejo</span>
+            </a>
+            <nav class="site-nav" aria-label="Navegación principal">
+                <button class="togglebtn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="navlinks" id="primary-navigation">
+                    <li><a href="#Home">Inicio</a></li>
+                    <li><a href="#SobreMi">Sobre mí</a></li>
+                    <li><a href="#Habilidades">Habilidades</a></li>
+                    <li><a href="#Experiencia">Experiencia</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="mode-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">
+                <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
             </button>
-                <div class="logo">
-                    <i class="fa-solid fa-l"></i>
-                    <div class="logo-text">Lucas Melgarejo</div>
-                </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#Habilidades">Habilidades</a></li>
-                        <li><a href="#Proyectos">Proyectos</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="container">
-                <div class="hero-pic">
-                    <img src="https://i.postimg.cc/0N7bmNj2/Imagen-de-Whats-App-2025-03-09-a-las-19-48-30-d977e136.jpg" alt="perfil">
-                </div>
-                <div class="hero-text">
-                    <h5>Hola, soy <span class="input"></span></h5>
-                    <h1>Lucas Melgarejo</h1>
-                    <p>Soy un futuro desarrollador web y (casi) Técnico Superior en Programación, a solo un cuatrimestre de recibir mi título. Me gusta estar en constante aprendizaje y me encuentro en busqueda de mi primera experiencia laboral IT.
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="Home">
+            <div class="wrapper hero-wrapper">
+                <div class="hero-content">
+                    <span class="eyebrow">Disponible para desafíos digitales</span>
+                    <h1>Construyo experiencias web claras y enfocadas en las personas.</h1>
+                    <p class="hero-roles"><span class="input"></span></p>
+                    <p class="hero-description">
+                        Soy un futuro desarrollador web y (casi) Técnico Superior en Programación. Me apasiona transformar ideas en
+                        interfaces funcionales, accesibles y fáciles de usar, mientras continúo formándome en buenas prácticas de desarrollo.
                     </p>
-                    <div class="btn-group">
-                        <a href="assets/CV_Lucas_Melgarejo.pdf" class="btn active">Descargar CV</a>
-                        <a href="https://wa.me/5493487691036" class="btn">Contacto</a>
+                    <div class="hero-actions">
+                        <a href="assets/CV_Lucas_Melgarejo.pdf" class="btn primary" target="_blank" rel="noopener">Descargar CV</a>
+                        <a href="#Contacto" class="btn secondary">Agendar una reunión</a>
                     </div>
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/lucasmelgarejo1"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" onclick="copiarEmail()"><i class="fa-solid fa-envelope"></i></a>
+                    <div class="hero-badges">
+                        <span class="badge"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Último cuatrimestre de la Tecnicatura</span>
+                        <span class="badge"><i class="fa-solid fa-people-arrows" aria-hidden="true"></i> Comunicación y trabajo colaborativo</span>
+                    </div>
+                    <div class="hero-stats">
+                        <article>
+                            <h3>+2</h3>
+                            <p>Proyectos implementados con foco en usabilidad</p>
+                        </article>
+                        <article>
+                            <h3>+4</h3>
+                            <p>Tecnologías dominadas en el stack inicial</p>
+                        </article>
+                        <article>
+                            <h3>2025</h3>
+                            <p>Graduación estimada como Técnico Superior en Programación</p>
+                        </article>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/lucasmelgarejo1" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://wa.me/5493487691036" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <button type="button" class="email-button" onclick="copiarEmail()" aria-label="Copiar correo electrónico">
+                            <i class="fa-solid fa-envelope"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-photo">
+                        <img src="https://i.postimg.cc/0N7bmNj2/Imagen-de-Whats-App-2025-03-09-a-las-19-48-30-d977e136.jpg" alt="Retrato de Lucas Melgarejo">
+                    </div>
+                    <div class="availability-card">
+                        <h3>Perfil en síntesis</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-code" aria-hidden="true"></i> HTML, CSS, JavaScript y Python</li>
+                            <li><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Metodologías ágiles y enfoque iterativo</li>
+                            <li><i class="fa-solid fa-language" aria-hidden="true"></i> Español nativo · Inglés intermedio</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!-- Flecha de scroll -->
             <div class="scroll-down">
-                <a href="#Habilidades"><i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#SobreMi" aria-label="Desplazarse a la sección Sobre mí">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
             </div>
-        </div>
-    </div>
-    
+        </section>
 
-    <!-- Secciones  -->
-    <section id="Home" class="section">
-        
-    </section><section id="Habilidades" class="section">
-        <h2>Habilidades</h2>
-        <div class="skills-container">
-            <!-- Tech Stack -->
-            <div class="skill-category">
-                <h3>Tech Stack</h3>
-                <ul>
-                    <li><i class="fa-brands fa-html5"></i> HTML</li>
-                    <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                    <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                    <li><i class="fa-brands fa-python"></i> Python</li>
-                </ul>
-            </div>
-            <!-- Tools -->
-            <div class="skill-category">
-                <h3>Tools</h3>
-                <ul>
-                    <li><i class="fa-solid fa-code"></i> Visual Studio Code</li>
-                    <li><i class="fa-solid fa-database"></i> PostgreSQL</li>
-                    <li><i class="fa-brands fa-aws"></i> AWS</li>
-                    <li><i class="fa-brands fa-git-alt"></i> Git & GitHub</li>
-                </ul>
-            </div>
-            <!-- Idiomas -->
-            <div class="skill-category">
-                <h3>Idiomas</h3>
-                <ul>
-                    <li><i class="fa-solid fa-language"></i> Español - Nativo</li>
-                    <li><i class="fa-solid fa-globe"></i> Inglés - Intermedio</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section id="Proyectos" class="section">
-        <h2>Mis Proyectos</h2>
-        <div class="proyectos-container">
-            <div class="proyecto">
-                <h3>Landing Page</h3>
-                <p>Proyecto de landing page de apple</p>
-                <img src="imagenes/imagen1.jpg" alt="Imagen del Proyecto" class="proyecto-img">
-                <div class="tecnologias">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-js"></i>
+        <section class="section about" id="SobreMi">
+            <div class="wrapper">
+                <div class="section-heading">
+                    <span class="eyebrow">Sobre mí</span>
+                    <h2>Impulso productos digitales con mentalidad analítica y curiosidad constante.</h2>
+                    <p>
+                        Me encuentro transitando el último tramo de la Tecnicatura Superior en Programación. Disfruto diseñar soluciones que
+                        combinan estética, rendimiento y escalabilidad. Trabajo con mentalidad de aprendizaje continuo, integrando feedback
+                        y buenas prácticas para ofrecer entregables confiables desde el primer prototipo hasta la puesta en producción.
+                    </p>
                 </div>
-                <a href="https://landingpageapple-six.vercel.app/" target="_blank">Ver Proyecto</a>
-            </div>
-            <div class="proyecto">
-                <h3>Calculadora</h3>
-                <p>Calculadora simple con python</p>
-                <img src="imagenes/imagen2.jpg" alt="Imagen del Proyecto" class="proyecto-img">
-                <div class="tecnologias">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-brands fa-python"></i>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <h3>Enfoque estratégico</h3>
+                        <p>Analizo cada proyecto con visión integral: objetivos de negocio, necesidades del usuario y métricas de éxito claras.</p>
+                    </article>
+                    <article class="about-card">
+                        <i class="fa-solid fa-pen-ruler" aria-hidden="true"></i>
+                        <h3>Diseño centrado en las personas</h3>
+                        <p>Construyo interfaces coherentes, accesibles y con atención al detalle para garantizar experiencias memorables.</p>
+                    </article>
+                    <article class="about-card">
+                        <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                        <h3>Colaboración transparente</h3>
+                        <p>Comunico avances, obstáculos y aprendizajes para alinear expectativas y acelerar la entrega de valor.</p>
+                    </article>
                 </div>
-                <a href="https://calculadorapython.onrender.com" target="_blank">Ver Proyecto</a>
             </div>
-    </section>
+        </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2025 Todos los derechos reservados.</p>
-        <p>Lucas.melgarejo.dev@gmail.com</p>
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/lucasmelgarejo1" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://wa.me/5493487691036" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
+        <section class="section skills" id="Habilidades">
+            <div class="wrapper">
+                <div class="section-heading">
+                    <span class="eyebrow">Habilidades</span>
+                    <h2>Un stack moderno para construir soluciones robustas.</h2>
+                    <p>Combino tecnologías frontend y backend con herramientas de colaboración que potencian el desarrollo ágil.</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <h3>Lenguajes & Frameworks</h3>
+                        <ul class="tag-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Herramientas & Plataformas</h3>
+                        <ul class="tag-list">
+                            <li>Visual Studio Code</li>
+                            <li>Git & GitHub</li>
+                            <li>PostgreSQL</li>
+                            <li>Render</li>
+                            <li>AWS</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Competencias clave</h3>
+                        <ul class="tag-list">
+                            <li>Metodologías ágiles</li>
+                            <li>Resolución de problemas</li>
+                            <li>Documentación técnica</li>
+                            <li>Testing funcional</li>
+                            <li>Comunicación efectiva</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experience" id="Experiencia">
+            <div class="wrapper">
+                <div class="section-heading">
+                    <span class="eyebrow">Experiencia & formación</span>
+                    <h2>Aprendizajes que se transforman en resultados concretos.</h2>
+                    <p>Cada proyecto representa una oportunidad para iterar, medir impacto y perfeccionar procesos técnicos.</p>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span class="timeline-date">2024</span>
+                        <h3>Landing page inspirada en Apple</h3>
+                        <p>Diseño y maquetación responsiva para presentar productos con estética premium. Integré animaciones suaves y buenas prácticas de SEO on-page.</p>
+                        <span class="timeline-tag">Diseño UI · Desarrollo Frontend</span>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-date">2024</span>
+                        <h3>Calculadora interactiva con Python</h3>
+                        <p>Aplicación web desplegada en Render que permite realizar operaciones matemáticas básicas con validaciones y feedback visual claro.</p>
+                        <span class="timeline-tag">Python · Deploy en la nube</span>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-date">2023 - 2025</span>
+                        <h3>Tecnicatura Superior en Programación</h3>
+                        <p>Formación orientada a algoritmia, estructuras de datos y desarrollo de software. Actualmente en el último cuatrimestre antes de la graduación.</p>
+                        <span class="timeline-tag">Próxima graduación</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects" id="Proyectos">
+            <div class="wrapper">
+                <div class="section-heading">
+                    <span class="eyebrow">Proyectos</span>
+                    <h2>Casos recientes que demuestran mi enfoque.</h2>
+                    <p>Explorá algunos proyectos en los que apliqué diseño centrado en el usuario, código limpio y despliegue en la nube.</p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <figure class="project-media">
+                            <img src="imagenes/imagen1.jpg" alt="Landing page inspirada en Apple">
+                        </figure>
+                        <div class="project-content">
+                            <h3>Landing Page Apple</h3>
+                            <p>Página promocional de alto impacto visual con transiciones y componentes reutilizables. Optimicé tiempos de carga y la experiencia mobile.</p>
+                            <ul class="chip-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://landingpageapple-six.vercel.app/" target="_blank" rel="noopener" class="btn tertiary">Ver proyecto</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <figure class="project-media">
+                            <img src="imagenes/imagen2.jpg" alt="Aplicación de calculadora con Python">
+                        </figure>
+                        <div class="project-content">
+                            <h3>Calculadora Python</h3>
+                            <p>Aplicación web diseñada para simplificar operaciones matemáticas cotidianas. Incluye controles de errores y un diseño claro para el usuario.</p>
+                            <ul class="chip-list">
+                                <li>Python</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Render</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://calculadorapython.onrender.com" target="_blank" rel="noopener" class="btn tertiary">Ver proyecto</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="Contacto">
+            <div class="wrapper">
+                <div class="section-heading">
+                    <span class="eyebrow">Contacto</span>
+                    <h2>¿Listo para trabajar juntos?</h2>
+                    <p>Escribime y conversemos sobre cómo puedo aportar valor a tu equipo o proyecto.</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <span>Correo</span>
+                                <a href="mailto:lucas.melgarejo.dev@gmail.com">lucas.melgarejo.dev@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            <div>
+                                <span>LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank" rel="noopener">@lucas-melgarejo</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            <div>
+                                <span>WhatsApp</span>
+                                <a href="https://wa.me/5493487691036" target="_blank" rel="noopener">+54 9 3487 691036</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-actions">
+                        <button type="button" class="btn secondary" onclick="copiarEmail()">Copiar correo</button>
+                        <a href="assets/CV_Lucas_Melgarejo.pdf" class="btn primary" target="_blank" rel="noopener">Descargar CV</a>
+                        <a href="https://wa.me/5493487691036" class="btn tertiary" target="_blank" rel="noopener">Enviar mensaje</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper footer-wrapper">
+            <p>&copy; 2025 Lucas Melgarejo. Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/lucasmelgarejo1" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://wa.me/5493487691036" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="mailto:lucas.melgarejo.dev@gmail.com" aria-label="Correo electrónico">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
         </div>
-        
-    </div>
-</footer>
+    </footer>
 
-    
-<script>
-    function copiarEmail() {
-        const email = "lucas.melgarejo.dev@gmail.com";
-        navigator.clipboard.writeText(email).then(() => {
-            alert("Correo copiado al portapapeles: " + email);
-        }).catch(err => {
-            console.error("Error al copiar el correo: ", err);
-        });
-    }
-    </script>    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
     <script>
+        function copiarEmail() {
+            const email = "lucas.melgarejo.dev@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Correo copiado al portapapeles: " + email);
+            }).catch(err => {
+                console.error("Error al copiar el correo: ", err);
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" integrity="sha512-+nL+tMEfEA5lc/yRjeMw8wUasYmHZze7ClMyAaHDxS8LLVohBPMJ7cAEql2GPkzxoF3qa9XpwaqVvCKPpyro4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const togglebtn = document.querySelector(".togglebtn");
+        const nav = document.querySelector(".navlinks");
+        const navLinks = document.querySelectorAll(".navlinks a");
+        const modeToggle = document.querySelector(".mode-toggle");
 
-        /* boton show/hide navbar */
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
-        
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
+        togglebtn.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("open");
+            togglebtn.classList.toggle("active", isOpen);
+            togglebtn.setAttribute("aria-expanded", isOpen);
         });
 
-        var typed = new Typed(".input", {
-            strings:["Developer", "Técnico superior en programación"],
-            typeSpeed:70,
-            backSpeed:55,
-            loop:true 
-        });
-        
-         /* Desplazamiento suave */
-         document.querySelectorAll('.navlinks a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
                 e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
+                const targetId = link.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
 
-                if (targetId === "Home") {
-                    window.scrollTo({ top: 0, behavior: 'smooth' }); // Llevar a la parte superior sin generar scroll innecesario
-                } else {
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                } else if (targetId === "Home") {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                 }
+
+                nav.classList.remove("open");
+                togglebtn.classList.remove("active");
+                togglebtn.setAttribute("aria-expanded", "false");
             });
         });
 
-        const modeToggle = document.querySelector('.mode-toggle');
-modeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('day-mode');
-});
+        const typed = new Typed(".input", {
+            strings: ["Desarrollador Frontend", "Técnico Superior en Programación"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
 
-
-
+        modeToggle.addEventListener("click", () => {
+            const isDayMode = document.body.classList.toggle("day-mode");
+            modeToggle.setAttribute("aria-pressed", isDayMode);
+        });
     </script>
 </body>
 </html>
