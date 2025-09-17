@@ -87,6 +87,74 @@ button {
     color: inherit;
 }
 
+.icon-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+    flex-shrink: 0;
+    color: inherit;
+}
+
+.icon path,
+.icon circle,
+.icon rect,
+.icon line,
+.icon polyline,
+.icon polygon {
+    vector-effect: non-scaling-stroke;
+}
+
+.icon-badge {
+    width: 1.35rem;
+    height: 1.35rem;
+    color: var(--accent);
+}
+
+.icon-card {
+    width: 2rem;
+    height: 2rem;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+}
+
+.icon-list {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: var(--accent);
+}
+
+.icon-contact {
+    width: 44px;
+    height: 44px;
+    padding: 0.75rem;
+    border-radius: 16px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.icon-social {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icon-scroll {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
 .wrapper {
     width: min(1120px, 92%);
     margin: 0 auto;
@@ -249,28 +317,29 @@ button {
     transform: translateY(-2px) scale(1.03);
 }
 
-.mode-toggle i {
+.mode-toggle .icon {
     position: absolute;
-    font-size: 1.1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.mode-toggle .fa-sun {
+.mode-toggle .icon--sun {
     opacity: 0;
     transform: translateY(12px);
 }
 
-.mode-toggle .fa-moon {
+.mode-toggle .icon--moon {
     opacity: 1;
     transform: translateY(0);
 }
 
-.day-mode .mode-toggle .fa-sun {
+.day-mode .mode-toggle .icon--sun {
     opacity: 1;
     transform: translateY(0);
 }
 
-.day-mode .mode-toggle .fa-moon {
+.day-mode .mode-toggle .icon--moon {
     opacity: 0;
     transform: translateY(-12px);
 }
@@ -410,7 +479,7 @@ button {
     box-shadow: var(--shadow-sm);
 }
 
-.badge i {
+.badge .icon {
     color: var(--accent);
 }
 
@@ -529,9 +598,8 @@ button {
     font-size: 0.98rem;
 }
 
-.availability-card i {
+.availability-card .icon {
     color: var(--accent);
-    font-size: 1.1rem;
 }
 
 .scroll-down {
@@ -626,10 +694,8 @@ button {
     box-shadow: var(--shadow-md);
 }
 
-.about-card i {
-    font-size: 1.9rem;
+.about-card .icon {
     color: var(--accent);
-    margin-bottom: 1.2rem;
 }
 
 .about-card h3 {
@@ -745,7 +811,7 @@ button {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2.5rem;
 }
 
@@ -840,16 +906,8 @@ button {
     gap: 1.1rem;
 }
 
-.contact-item i {
-    width: 44px;
-    height: 44px;
-    border-radius: 16px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+.contact-item .icon {
+    flex-shrink: 0;
 }
 
 .contact-item span {
@@ -998,6 +1056,21 @@ button {
     }
 }
 
+@media (max-width: 640px) {
+    .timeline::before {
+        left: 18px;
+    }
+
+    .timeline-item {
+        padding: 1.6rem 1.6rem 1.6rem 3.6rem;
+    }
+
+    .timeline-item::before {
+        left: 18px;
+        top: 24px;
+    }
+}
+
 @media (max-width: 600px) {
     .hero-badges,
     .hero-actions,
@@ -1025,7 +1098,36 @@ button {
     }
 
     .navlinks {
-        width: 260px;
+        width: min(320px, calc(100vw - 2rem));
+    }
+}
+
+@media (max-width: 540px) {
+    .contact-card {
+        padding: 1.8rem;
+        gap: 2rem;
+    }
+
+    .contact-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-actions .btn {
+        width: 100%;
+    }
+
+    .footer-wrapper {
+        align-items: center;
+    }
+
+    .footer-wrapper p {
+        text-align: center;
+    }
+
+    .footer-social {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -1056,8 +1158,39 @@ button {
         width: 100%;
     }
 
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        padding: 1.5rem 1.5rem 1.5rem 3.3rem;
+    }
+
+    .timeline-item::before {
+        left: 1.5rem;
+        top: 1.6rem;
+    }
+
     .scroll-down {
         width: 44px;
         height: 44px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero {
+        padding: 115px 0 90px;
+    }
+
+    .hero-photo {
+        width: 220px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .contact-card {
+        padding: 1.6rem;
     }
 }
