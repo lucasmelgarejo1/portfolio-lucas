@@ -9,9 +9,100 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-1hcP5ZOFj2Hn3zA0QKIfQ9Vc3rroWAtxEvsC0ZFwEuk+qS0bkkCm1cW0XwuKADVY6jwxKF1u9IiMaivGi99ZHw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true" focusable="false">
+        <symbol id="icon-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <line x1="12" y1="2" x2="12" y2="4" />
+                <line x1="12" y1="20" x2="12" y2="22" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="2" y1="12" x2="4" y2="12" />
+                <line x1="20" y1="12" x2="22" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-graduation" viewBox="0 0 24 24">
+            <path d="M3 9 12 5l9 4-9 4-9-4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 11.5v3c0 2.2 2.9 4 6 4s6-1.8 6-4v-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21 9v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <circle cx="21" cy="14.5" r="0.9" fill="currentColor" />
+        </symbol>
+        <symbol id="icon-collaboration" viewBox="0 0 24 24">
+            <circle cx="7" cy="6.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="17" cy="6.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 19.5c0-2.9 2.3-5 5.2-5 1.5 0 2.9.6 3.8 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M20 19.5c0-2.9-2.3-5-5.2-5-1.5 0-2.9.6-3.8 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="8 10 12 12.5 8 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="16 10 12 12.5 16 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-code" viewBox="0 0 24 24">
+            <polyline points="9 7 4 12 9 17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="15 7 20 12 15 17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-diagram" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="7" height="5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            <rect x="14" y="4" width="7" height="5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            <rect x="8.5" y="15" width="7" height="5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            <path d="M6.5 9v5.5A1.5 1.5 0 0 0 8 16h3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17.5 9v4.5A1.5 1.5 0 0 1 16 15h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-language" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <path d="M4 12h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M12 4c2.5 2.6 4 5.4 4 8s-1.5 5.4-4 8c-2.5-2.6-4-5.4-4-8s1.5-5.4 4-8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M6 7.5c1.8.8 3.9 1.2 6 1.2s4.2-.4 6-1.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M6 16.5c1.8-.8 3.9-1.2 6-1.2s4.2.4 6 1.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-lightbulb" viewBox="0 0 24 24">
+            <path d="M12 3a6 6 0 0 0-6 6c0 2 .9 3.7 2.4 4.9A3.6 3.6 0 0 1 10 17v.5h4V17a3.6 3.6 0 0 1 1.6-3.1A6 6 0 0 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 18v.5a2 2 0 0 0 4 0V18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <line x1="9.5" y1="21" x2="14.5" y2="21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-design" viewBox="0 0 24 24">
+            <path d="M4 4L12 12L8.5 15.5L0.5 7.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 4L5.5 2.5L13.5 10.5L12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="14" y="3" width="6" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            <line x1="16" y1="5" x2="18" y2="5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <line x1="16" y1="8" x2="18" y2="8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <line x1="16" y1="11" x2="18" y2="11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-people" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <circle cx="6" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <circle cx="18" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <path d="M4 20c0-3.3 3-6 8-6s8 2.7 8 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.5 19.5c0-2.6 1.9-4.7 4.5-5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M21.5 19.5c0-2.6-1.9-4.7-4.5-5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <circle cx="8" cy="8" r="1.3" fill="currentColor" />
+            <rect x="6.7" y="10.5" width="2.6" height="8.5" rx="1.2" fill="currentColor" />
+            <path d="M11.5 10.5h2.1v1.1c.5-.8 1.3-1.3 2.4-1.3 2.1 0 3.5 1.3 3.5 3.7v4.9h-2.6v-4.4c0-1.2-.5-1.8-1.5-1.8s-1.6.7-1.6 1.8v4.4h-2.3Z" fill="currentColor" />
+        </symbol>
+        <symbol id="icon-github" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.04 1.53 1.04.89 1.52 2.33 1.08 2.9.82.09-.64.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.11 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.69-4.59 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor" />
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+            <path d="M12 3a8.5 8.5 0 0 0-8.47 9.74 7.7 7.7 0 0 0 .78 2.65l-1.04 3.82 3.93-1.03a8.48 8.48 0 0 0 4.8 1.45A8.5 8.5 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.2 9.4c0 2 1.7 3.7 3.8 3.8.4 0 .8-.1 1.1-.3l1 .5a.9.9 0 0 0 1-.2l.5-.6a.9.9 0 0 0-.1-1.2l-1.3-1.2a.7.7 0 0 0-.9 0l-.3.4a3.3 3.3 0 0 1-1.7-1.6l.3-.4a.7.7 0 0 0 0-.9L11 6.7a.9.9 0 0 0-1.2-.1l-.6.5a.9.9 0 0 0-.2 1l.5 1c-.2.3-.3.7-.3 1.1Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            <polyline points="4 7 12 12 20 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+    </svg>
     <header class="site-header">
         <div class="wrapper header-wrapper">
             <a class="brand" href="#Home" aria-label="Ir al inicio">
@@ -34,8 +125,12 @@
                 </ul>
             </nav>
             <button class="mode-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">
-                <i class="fa-solid fa-sun" aria-hidden="true"></i>
-                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                <svg class="icon icon--sun" aria-hidden="true" focusable="false">
+                    <use href="#icon-sun"></use>
+                </svg>
+                <svg class="icon icon--moon" aria-hidden="true" focusable="false">
+                    <use href="#icon-moon"></use>
+                </svg>
             </button>
         </div>
     </header>
@@ -56,8 +151,18 @@
                         <a href="#Contacto" class="btn secondary">Agendar una reunión</a>
                     </div>
                     <div class="hero-badges">
-                        <span class="badge"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Último cuatrimestre de la Tecnicatura</span>
-                        <span class="badge"><i class="fa-solid fa-people-arrows" aria-hidden="true"></i> Comunicación y trabajo colaborativo</span>
+                        <span class="badge">
+                            <svg class="icon icon-badge" aria-hidden="true" focusable="false">
+                                <use href="#icon-graduation"></use>
+                            </svg>
+                            Último cuatrimestre de la Tecnicatura
+                        </span>
+                        <span class="badge">
+                            <svg class="icon icon-badge" aria-hidden="true" focusable="false">
+                                <use href="#icon-collaboration"></use>
+                            </svg>
+                            Comunicación y trabajo colaborativo
+                        </span>
                     </div>
                     <div class="hero-stats">
                         <article>
@@ -75,16 +180,24 @@
                     </div>
                     <div class="hero-social">
                         <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                                <use href="#icon-linkedin"></use>
+                            </svg>
                         </a>
                         <a href="https://github.com/lucasmelgarejo1" target="_blank" rel="noopener" aria-label="GitHub">
-                            <i class="fa-brands fa-github"></i>
+                            <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                                <use href="#icon-github"></use>
+                            </svg>
                         </a>
                         <a href="https://wa.me/5493487691036" target="_blank" rel="noopener" aria-label="WhatsApp">
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                                <use href="#icon-whatsapp"></use>
+                            </svg>
                         </a>
                         <button type="button" class="email-button" onclick="copiarEmail()" aria-label="Copiar correo electrónico">
-                            <i class="fa-solid fa-envelope"></i>
+                            <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                                <use href="#icon-mail"></use>
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -95,16 +208,33 @@
                     <div class="availability-card">
                         <h3>Perfil en síntesis</h3>
                         <ul>
-                            <li><i class="fa-solid fa-code" aria-hidden="true"></i> HTML, CSS, JavaScript y Python</li>
-                            <li><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Metodologías ágiles y enfoque iterativo</li>
-                            <li><i class="fa-solid fa-language" aria-hidden="true"></i> Español nativo · Inglés intermedio</li>
+                            <li>
+                                <svg class="icon icon-list" aria-hidden="true" focusable="false">
+                                    <use href="#icon-code"></use>
+                                </svg>
+                                HTML, CSS, JavaScript y Python
+                            </li>
+                            <li>
+                                <svg class="icon icon-list" aria-hidden="true" focusable="false">
+                                    <use href="#icon-diagram"></use>
+                                </svg>
+                                Metodologías ágiles y enfoque iterativo
+                            </li>
+                            <li>
+                                <svg class="icon icon-list" aria-hidden="true" focusable="false">
+                                    <use href="#icon-language"></use>
+                                </svg>
+                                Español nativo · Inglés intermedio
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="scroll-down">
                 <a href="#SobreMi" aria-label="Desplazarse a la sección Sobre mí">
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <svg class="icon icon-scroll" aria-hidden="true" focusable="false">
+                        <use href="#icon-chevron-down"></use>
+                    </svg>
                 </a>
             </div>
         </section>
@@ -122,17 +252,23 @@
                 </div>
                 <div class="about-grid">
                     <article class="about-card">
-                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <svg class="icon icon-card" aria-hidden="true" focusable="false">
+                            <use href="#icon-lightbulb"></use>
+                        </svg>
                         <h3>Enfoque estratégico</h3>
                         <p>Analizo cada proyecto con visión integral: objetivos de negocio, necesidades del usuario y métricas de éxito claras.</p>
                     </article>
                     <article class="about-card">
-                        <i class="fa-solid fa-pen-ruler" aria-hidden="true"></i>
+                        <svg class="icon icon-card" aria-hidden="true" focusable="false">
+                            <use href="#icon-design"></use>
+                        </svg>
                         <h3>Diseño centrado en las personas</h3>
                         <p>Construyo interfaces coherentes, accesibles y con atención al detalle para garantizar experiencias memorables.</p>
                     </article>
                     <article class="about-card">
-                        <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                        <svg class="icon icon-card" aria-hidden="true" focusable="false">
+                            <use href="#icon-people"></use>
+                        </svg>
                         <h3>Colaboración transparente</h3>
                         <p>Comunico avances, obstáculos y aprendizajes para alinear expectativas y acelerar la entrega de valor.</p>
                     </article>
@@ -269,21 +405,27 @@
                 <div class="contact-card">
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <svg class="icon icon-contact" aria-hidden="true" focusable="false">
+                                <use href="#icon-mail"></use>
+                            </svg>
                             <div>
                                 <span>Correo</span>
                                 <a href="mailto:lucas.melgarejo.dev@gmail.com">lucas.melgarejo.dev@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            <svg class="icon icon-contact" aria-hidden="true" focusable="false">
+                                <use href="#icon-linkedin"></use>
+                            </svg>
                             <div>
                                 <span>LinkedIn</span>
                                 <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank" rel="noopener">@lucas-melgarejo</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            <svg class="icon icon-contact" aria-hidden="true" focusable="false">
+                                <use href="#icon-whatsapp"></use>
+                            </svg>
                             <div>
                                 <span>WhatsApp</span>
                                 <a href="https://wa.me/5493487691036" target="_blank" rel="noopener">+54 9 3487 691036</a>
@@ -305,16 +447,24 @@
             <p>&copy; 2025 Lucas Melgarejo. Todos los derechos reservados.</p>
             <div class="footer-social">
                 <a href="https://www.linkedin.com/in/lucas-melgarejo-8262ba337/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                        <use href="#icon-linkedin"></use>
+                    </svg>
                 </a>
                 <a href="https://github.com/lucasmelgarejo1" target="_blank" rel="noopener" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
+                    <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                        <use href="#icon-github"></use>
+                    </svg>
                 </a>
                 <a href="https://wa.me/5493487691036" target="_blank" rel="noopener" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                        <use href="#icon-whatsapp"></use>
+                    </svg>
                 </a>
                 <a href="mailto:lucas.melgarejo.dev@gmail.com" aria-label="Correo electrónico">
-                    <i class="fa-solid fa-envelope"></i>
+                    <svg class="icon icon-social" aria-hidden="true" focusable="false">
+                        <use href="#icon-mail"></use>
+                    </svg>
                 </a>
             </div>
         </div>
